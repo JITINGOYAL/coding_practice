@@ -1,0 +1,21 @@
+# cook your dish here
+R = []
+d = 42.195
+
+while True:
+    distance = input()
+    if (distance == "q"):
+        break
+    elif ((float(distance) >= d) or (float(distance) < 0)):
+        pass
+    else:
+        R.append(float(distance))
+
+R.sort(reverse=True)
+
+
+print("Highest Distance excluding Finishers:")
+if (len(R)>3):
+    print([R[i] for i in range(0,3)])
+else:
+    print("Invalid Input")
